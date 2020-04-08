@@ -2,5 +2,5 @@
 FROM tiangolo/node-frontend:10 as build-stage
 WORKDIR /app
 RUN npm install
-COPY . .
+COPY ./ /app/
 CMD npm start

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import Typography from '@material-ui/core/Typography';
 import TodoForm from './TodoForm';

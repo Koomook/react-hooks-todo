@@ -7,7 +7,7 @@ const TodoForm = ({ saveTodo }) => {
 
   return (
     <form
-      onSubmit={event => {
+      onSubmit={(event) => {
         event.preventDefault();
 
         saveTodo(value);

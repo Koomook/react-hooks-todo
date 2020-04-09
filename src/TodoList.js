@@ -15,7 +15,7 @@ const TodoList = ({ todos, deleteTodo }) => (
         <ListItemText primary={todo} />
         <ListItemSecondaryAction>
           <IconButton
-            aria-label="Delete"
+            aria-label='Delete'
             onClick={() => {
               deleteTodo(index);
             }}

@@ -24,12 +24,14 @@ const TodoForm = ({ saveTodo }) => {
         onChange={onChange}
         value={value}
       />
+      <br></br>
       <Button
         variant="outlined"
         margin="normal"
+        color="primary"
         onClick={submit}
       >
-        submit
+      submit
       </Button>
     </form>
   );

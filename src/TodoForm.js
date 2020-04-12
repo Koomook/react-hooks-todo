@@ -6,14 +6,16 @@ import { Button } from '@material-ui/core';
 const TodoForm = ({ saveTodo }) => {
   const { value, reset, onChange } = useInputState();
 
+  const submit = event => {
+    event.preventDefault();
+
+    saveTodo(value);
+    reset();
+  }
+
   return (
     <form
-      onSubmit={event => {
-        event.preventDefault();
-
-        saveTodo(value);
-        reset();
-      }}
+      onSubmit={submit}
     >
       <TextField
         variant="outlined"
@@ -25,12 +27,7 @@ const TodoForm = ({ saveTodo }) => {
       <Button
         variant="outlined"
         margin="normal"
-        onClick={event => {
-          event.preventDefault();
-
-          saveTodo(value);
-          reset();
-        }}
+        onClick={submit}
       >
         submit
       </Button>

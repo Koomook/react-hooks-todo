@@ -1,13 +1,14 @@
 import React from 'react';
 import TextField from '@material-ui/core/TextField';
 import useInputState from './useInputState';
+import { Button } from '@material-ui/core';
 
 const TodoForm = ({ saveTodo }) => {
   const { value, reset, onChange } = useInputState();
 
   return (
     <form
-      onSubmit={(event) => {
+      onSubmit={event => {
         event.preventDefault();
 
         saveTodo(value);
@@ -21,14 +22,18 @@ const TodoForm = ({ saveTodo }) => {
         onChange={onChange}
         value={value}
       />
-      <button onClick={(event) => {
-        event.preventDefault();
+      <Button
+        variant="outlined"
+        margin="normal"
+        onClick={event => {
+          event.preventDefault();
 
-        saveTodo(value);
-        reset();
+          saveTodo(value);
+          reset();
         }}
       >
-      </button>
+        submit
+      </Button>
     </form>
   );
 };

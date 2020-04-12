@@ -21,6 +21,14 @@ const TodoForm = ({ saveTodo }) => {
         onChange={onChange}
         value={value}
       />
+      <button onClick={(event) => {
+        event.preventDefault();
+
+        saveTodo(value);
+        reset();
+        }}
+      >
+      </button>
     </form>
   );
 };
